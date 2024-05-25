@@ -13,7 +13,7 @@ class SavedNewsPage extends StatelessWidget {
     final savedNews = newsProvider.news.where((news) => news.isSaved).toList();
     return Scaffold(
       appBar: AppBar(
-        title: const Center(child: Text('Saved News')),
+        title: const Center(child: Text('Saved News',style: TextStyle(color: Colors.deepOrange),)),
       ),
       body: ListView.builder(
         itemCount: savedNews.length,

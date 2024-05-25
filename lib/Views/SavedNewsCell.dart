@@ -15,13 +15,13 @@ class NewsListCell extends StatelessWidget {
         borderRadius: BorderRadius.circular(8.0),
         child: Image.network(
           news.urlToImage ?? '', // Use urlToImage property
-          errorBuilder: (context, error, stackTrace) => const Icon(Icons.sms_failed_rounded),
+          errorBuilder: (context, error, stackTrace) => const Icon(Icons.sms_failed_rounded,color: Colors.red,),
         ),
       ),
       title: Text(news.title ?? ''), // Use title property
       trailing: Consumer<NewsProvider>(
         builder: (context, newsProvider, _) => IconButton(
-          icon: Icon(news.isSaved ? Icons.bookmark : Icons.bookmark_border_rounded),
+          icon: Icon(news.isSaved ? Icons.bookmark : Icons.bookmark_border_rounded,color: Colors.deepOrange),
           onPressed: () {
             newsProvider.toggleFavorite(news);
           },

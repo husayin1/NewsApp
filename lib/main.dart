@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         home: Consumer<NewsProvider>(
           builder: (context, newsProvider, _) => Scaffold(
             appBar: AppBar(
-              title: const Center(child: Text('News')),
+              title: const Center(child: Text('News',style: TextStyle(color: Colors.deepOrange),)),
               actions: [
                 IconButton(
                   icon: const Icon(Icons.bookmark),
